@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'MEDSENIOR | Cuidado que acolhe',
-  description: 'Planos de saúde MEDSENIOR com atendimento humanizado, rede credenciada e cuidado perto de você.',
+  description: 'Planos de saúde, atendimento próximo e cuidado humanizado para viver bem.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -26,9 +26,11 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light',
-  themeColor: '#0a6d50',
-  userScalable: true,
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
 }
 
 export default function RootLayout({
